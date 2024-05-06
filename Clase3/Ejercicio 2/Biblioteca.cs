@@ -7,9 +7,11 @@ using System.Threading.Tasks;
 
 namespace Clase3.Ejercicio_2
 {
-    public class Biblioteca
+    public class Biblioteca: IBiblioteca
     {
         public List<string> Libros { get; set; }
+
+
 
         public Biblioteca()
         {
@@ -26,6 +28,14 @@ namespace Clase3.Ejercicio_2
                 "Los miserables",
                 "La sombra del viento"
             };
+        }
+
+        public void ObtenerLibros()
+        {
+            foreach (var libro in Libros)
+            {
+                Console.WriteLine(libro);
+            }
         }
         
 
